@@ -1,0 +1,34 @@
+
+#Diagrama Sistema complejo Banco
+
+
+flowchart TB
+    %% Entorno externo al sistema
+    subgraph Clientes
+        Cliente[Cliente]
+        Cajero[Cajero]
+        Banco[Banco]
+    end
+
+    %% Sistema
+    subgraph Sistema
+        A[Entradas:transaccion,menu,dinero,]
+        B[Procesos:menu,gestion de la transaccion,retiro del dinero,descontado de la cuenta]
+        C[Salidas:salida del dinero,recibo,]
+        D[Retroalimentacion:soporte tecnico del dispositivo,Reseñas,evaluacion de efectividad]
+    end
+
+    %% Flujo del sistema
+    Cliente --> A
+    Cajero --> A
+Banco --> A
+ A --> B
+ B --> C
+ C --> D
+
+ %% Retroalimentación hacia los procesos
+ D --> B
+
+ %% Salidas afectan al entorno
+ C --> Cliente
+ C --> Cajero

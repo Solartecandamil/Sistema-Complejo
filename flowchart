@@ -1,4 +1,4 @@
-flowchart TB
+ flowchart TB
     %% Entorno externo al sistema
     subgraph Clientes
         Cliente[Cliente]
@@ -8,23 +8,23 @@ flowchart TB
 
     %% Sistema
     subgraph Sistema
-        A[Entradas:transaccion,menu,dinero,]
-        B[Procesos:menu,gestion de la transaccion,retiro del dinero,descontado de la cuenta]
-        C[Salidas:salida del dinero,recibo,]
-        D[Retroalimentacion:soporte tecnico del dispositivo,Reseñas,evaluacion de efectividad]
+        A[Entradas: transacción, menú, dinero]
+        B[Procesos: menú, gestión de la transacción, retiro del dinero, descontado de la cuenta]
+        C[Salidas: salida del dinero, recibo]
+        D[Retroalimentación: soporte técnico del dispositivo, reseñas, evaluación de efectividad]
     end
 
     %% Flujo del sistema
     Cliente --> A
     Cajero --> A
-Banco --> A
- A --> B
- B --> C
- C --> D
+    Banco --> A
+    A --> B
+    B --> C
+    C --> D
 
- %% Retroalimentación hacia los procesos
- D --> B
+    %% Retroalimentación hacia los procesos
+    D --> B
 
- %% Salidas afectan al entorno
- C --> Cliente
- C --> Cajero
+    %% Salidas afectan al entorno
+    C --> Cliente
+    C --> Cajero 

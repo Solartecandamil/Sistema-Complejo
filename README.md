@@ -3,5 +3,5 @@
 ## Diagrama Sistema complejo Banco
 
 
-Por David Andres Solarte
+Por David Andres Solarte/
     Cristian Andres Martinez

@@ -8,10 +8,10 @@
 
     %% Sistema
     subgraph Sistema
-        A[Entradas: transacción, menú, dinero]
-        B[Procesos: menú, gestión de la transacción, retiro del dinero, descontado de la cuenta]
-        C[Salidas: salida del dinero, recibo]
-        D[Retroalimentación: soporte técnico del dispositivo, reseñas, evaluación de efectividad]
+        A[Entradas: transacción, menú, dinero, autenticación, validación de cuenta]
+        B[Procesos: menú, gestión de la transacción, retiro del dinero, descontado de la cuenta, verificación de saldo, actualización de base de datos]
+        C[Salidas: salida del dinero, recibo, notificación de transacción, actualización de saldo]
+        D[Retroalimentación: soporte técnico del dispositivo, reseñas, evaluación de efectividad, informes de errores]
     end
 
     %% Flujo del sistema
@@ -27,4 +27,5 @@
 
     %% Salidas afectan al entorno
     C --> Cliente
-    C --> Cajero 
+    C --> Cajero
+    C --> Banco 
